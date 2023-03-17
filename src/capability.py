@@ -7,7 +7,7 @@ class Capabilities:
         lsl = limits[0]
         usl = limits[1]
 
-        return min(self.get_cpl(mean, stdev, lsl),self.get_cpl(mean, stdev, lsl))
+        return min(self.get_cpl(mean, stdev, lsl),self.get_cpl(mean, stdev, usl))
 
 
     def get_cpl(self, mean: float, stdev: float, lsl: float):
@@ -28,6 +28,3 @@ for column in range(len(data)+1):
     index += 1
 
 print(cpks)
-
-
-    
